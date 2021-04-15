@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 use Redirect,Response;
 
 class ProductController extends Controller {
-	  /**
-	 * Display list of product.
-	 *
-	 */	
+/**
+* Display list of product.
+*
+*/	
   public function index() {
     $header = new HeaderController;
     $footer = new FooterController;

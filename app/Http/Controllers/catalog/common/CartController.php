@@ -6,7 +6,10 @@ use Redirect,Response;
 
 class CartController extends Controller {
 
-	// Display cart html
+/**
+* Display cart HTML.
+*
+*/
 	public function index() {
 		$cart = $this->getCart();
 		$data = array();
@@ -26,17 +29,26 @@ class CartController extends Controller {
 		return view('cart', $data);
 	}
 
-	// Display cart html, for ajax post
+/**
+* @return array $this->index() HTML of the cart
+*
+*/
 	public function loadCart(Request $request){
 		return $this->index();
 	}
 
-	// Get the content of cart
+/**
+* Get the content of session cart
+*
+*/
 	public function getCart(){
 		return session()->get('cart');
 	}
 
-	// Add to cart
+/**
+* Add product(s) to session cart
+*
+*/
 	public function add($data){
 		$cart = $this->getCart();
 		$cart[] = $data;
@@ -47,13 +59,21 @@ class CartController extends Controller {
 	public function update(){}
 
 	// Remove from cart
+
+/**
+* Add product(s) to cart
+*
+*/
 	public function remove($cart_id){
 		$cart = $this->getCart();
 		if(isset($cart[$cart_id])) unset($cart[$cart_id]);
 		session()->put('cart', $cart);
 	}
 
-	// Remove all products of cart
+/**
+* Remove all products of cart
+*
+*/
 	public function clear(){
 		session()->forget('cart');
 	}

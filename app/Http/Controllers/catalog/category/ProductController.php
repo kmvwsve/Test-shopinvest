@@ -35,7 +35,12 @@ class ProductController extends Controller {
     	return view('404');
     }
   }
-
+/**
+* Get a product by product_id
+*
+* @param int $id product id
+* @return array $data list of params of product
+*/
   public function getProductById($id) {
     $m_product = new Product;
     $data = array();
@@ -57,6 +62,12 @@ class ProductController extends Controller {
     } 
   }
 
+/**
+* Receive product id by method ajax.
+* Add to cart
+*
+* @return string 
+*/
   public function addCart(Request $request){
     if(request()->ajax()) {
     	$product_id = request()->product_id;
@@ -82,6 +93,12 @@ class ProductController extends Controller {
     }
 	}
 
+/**
+* Receive product id by method ajax.
+* Remove product(s) from the cart
+*
+* @return string 
+*/
   public function removeCart(Request $request){
     if(request()->ajax()) {
     	$cart_id = request()->cart_id;
