@@ -1,4 +1,5 @@
 # TEST SHOPINVEST
+URL de test en ligne: http://test-shopinvest.shuo.fr/
 
 ## Liste des technos
 - PHP 7.3.5
@@ -20,7 +21,13 @@
 3. Entrer le fichier `.env`, et modifer les paramètres de la connection de la base de données.
 4. Modifer le 'RewriteBase' dans le fichier `public/.htaccess`.
 5. Utiliser le fichier  `projectapp.sql` pour créer la base de données de test.
-
+## Démarrage
+1. Page produit: (ex: product_id = 1)
+    - Local: http://localhost/xxx/product/1
+    - Test en ligne: http://test-shopinvest.shuo.fr/product/1
+2. Page gestion de prduits:
+    - Local: http://localhost/xxx/admin
+    - Test en ligne: http://test-shopinvest.shuo.fr/admin
 ## Structure des fichiers
     ├── app                    
     │   ├── Http             
