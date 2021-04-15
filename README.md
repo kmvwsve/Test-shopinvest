@@ -27,18 +27,18 @@
     │   │   ├── Controllers              
     │   │   │   ├── admin              
     │   │   │   │   ├── category              
-    │   │   │   │   │   ├── ProductController.php     # page admin index, page liste des produits, CRUD
-    │   │   │   │   ├── common              
-    │   │   │   │   │   ├── HeaderController.php      # page admin header
-    │   │   │   │   │   ├── FooterController.php      # page admin footer
+    │   │   │   │   │   └── ProductController.php     # page admin index, page liste des produits, CRUD
+    │   │   │   │   └── common              
+    │   │   │   │       ├── HeaderController.php      # page admin header
+    │   │   │   │       └── FooterController.php      # page admin footer
     │   │   │   ├── catalog              
     │   │   │   │   ├── category              
-    │   │   │   │   │   ├── ProductController.php     # récupérer un produit par ID, actions Ajouter/Supprimer au panier
-    │   │   │   │   ├── common     
-    │   │   │   │   │   ├── CartController.php        # Action de session du panier
-    │   │   │   │   │   ├── HeaderController.php      # page front header
-    │   │   │   │   │   ├── FooterController.php      # page front footer
-    |   |   |   |   └── ... 
+    │   │   │   │   │   └── ProductController.php     # récupérer un produit par ID, actions Ajouter/Supprimer au panier
+    │   │   │   │   └── common     
+    │   │   │   │       ├── CartController.php        # Action de session du panier
+    │   │   │   │       ├── HeaderController.php      # page front header
+    │   │   │   │       └── FooterController.php      # page front footer
+    |   |   |   |    
     |   |   |   └── ...
     |   |   └── ...
     │   ├── Model              
