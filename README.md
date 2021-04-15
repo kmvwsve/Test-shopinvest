@@ -71,5 +71,5 @@ Test ajouter un produit au panier.
    ```
 ## TO DO..
 1. Page d'accueil.
-1. Méthode de l'authentification.
+1. Module de l'authentification.
 2. Module du traitement d'image.
