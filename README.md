@@ -1,4 +1,7 @@
-<h1>TEST SHOPINVEST</h1>
+<p align="center">
+<h1 align="center">TEST SHOPINVEST</h1>
+</p>
+<br><br>
 
 ## Liste des technos
 - PHP 7.3.5
@@ -18,4 +21,5 @@
    composer install
    ```
 3. Entrer le fichier `.env`, et modifer les paramètres pour la connection du base de donnée.
+4. Modifer le 'RewriteBase' dans le fichier `public/.htaccess`.
 
