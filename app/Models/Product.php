@@ -5,6 +5,13 @@ use Illuminate\Support\Facades\DB;
 
 class Product {
 
+/**
+* Get a product by product id
+*
+* @param int $id product id
+* @return array
+*
+*/
 	public function get($id) {
 		$product = array();
 		if($id) {
@@ -37,20 +44,40 @@ class Product {
   	return $product;
 	}
 
+/**
+* Get all images of a product by product id
+*
+* @param int $id product id
+* @return array 
+*/
 	public function getProductImages($id) {
 		return $return = DB::select('SELECT * FROM product_image WHERE product_id = ?', [$id]);
 	}
 
+/**
+* Get all marks
+*
+* @return array 
+*/
 	public function getMarks() {
 		return $return = DB::select('SELECT * FROM mark');
 	}
 
+/**
+* Get all the products
+* @return array 
+*/
 	public function getAll() {
 		return $return = DB::select('SELECT p.*, m.name AS mark 
 				FROM product p 
 				LEFT JOIN mark m ON p.mark_id = m.mark_id');		
 	}
 
+/**
+* Add a product to DB
+*
+* @param array $data product info
+*/
 	public function add($data) {
 		DB::table('product')->insert([
 		  'name'        => (string)$data['name'],
@@ -74,6 +101,11 @@ class Product {
 		}
 	}
 
+/**
+* Update info of a product
+*
+* @param array $data product info
+*/
 	public function update($data) {
 		$product_id = (int)$data['product_id'];
 		DB::table('product')
@@ -100,7 +132,12 @@ class Product {
 			}
 		}		
 	}
-
+/**
+* Remove a product by product id
+*
+* @param int $product_id product id
+*
+*/
 	public function remove($product_id) {
 		DB::table('product')->where('product_id', '=', $product_id)->delete();
 		DB::table('product_image')->where('product_id', '=', $product_id)->delete();
