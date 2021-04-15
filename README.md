@@ -1,7 +1,4 @@
-<p align="center">
 # TEST SHOPINVEST
-</p>
-<br><br>
 
 ## Liste des technos
 - PHP 7.3.5
@@ -24,3 +21,39 @@
 4. Modifer le 'RewriteBase' dans le fichier `public/.htaccess`.
 5. Utiliser le fichier  `projectapp.sql` pour créer la base de données de test.
 
+## Structure des fichiers
+    ├── app                    
+    │   ├── Http             
+    │   │   ├── Controllers              
+    │   │   │   ├── admin              
+    │   │   │   │   ├── category              
+    │   │   │   │   │   ├── ProductController.php     # page admin index, page liste des produits, CRUD
+    │   │   │   │   ├── common              
+    │   │   │   │   │   ├── HeaderController.php      # page admin header
+    │   │   │   │   │   ├── FooterController.php      # page admin footer
+    │   │   │   ├── catalog              
+    │   │   │   │   ├── category              
+    │   │   │   │   │   ├── ProductController.php     # récupérer un produit par ID, actions Ajouter/Supprimer au panier
+    │   │   │   │   ├── common     
+    │   │   │   │   │   ├── CartController.php        # Action de session du panier
+    │   │   │   │   │   ├── HeaderController.php      # page front header
+    │   │   │   │   │   ├── FooterController.php      # page front footer
+    |   |   |   |   └── ... 
+    |   |   |   └── ...
+    |   |   └── ...
+    │   ├── Model              
+    │   │   ├── Product.php    # Opérations CRUD de la base de donnée 
+    |   |   └── ...
+    ├── resources
+    │   ├── views              
+    │   │   ├── 404.blade.php
+    │   │   ├── admin.blade.php
+    │   │   ├── cart.blade.php
+    │   │   ├── footer.blade.php
+    │   │   ├── header.blade.php
+    │   │   ├── header_admin.blade.php
+    │   │   ├── product.blade.php
+    │   │   ├── product_edit.blade.php
+    │   │   └── ...
+    |   └── ...
+    └── ...
