@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 
 class Product {
 
@@ -102,12 +103,15 @@ class Product {
 	}
 
 /**
-* Update info of a product
+* Update info of a product, and delete the cache
 *
 * @param array $data product info
 */
 	public function update($data) {
 		$product_id = (int)$data['product_id'];
+
+  	Cache::forget('product_'.$product_id);
+
 		DB::table('product')
 		->where('product_id', '=', $product_id)
 		->update([
@@ -133,12 +137,13 @@ class Product {
 		}		
 	}
 /**
-* Remove a product by product id
+* Remove a product by product id, and delete the cache
 *
 * @param int $product_id product id
 *
 */
 	public function remove($product_id) {
+		Cache::forget('product_'.$product_id);
 		DB::table('product')->where('product_id', '=', $product_id)->delete();
 		DB::table('product_image')->where('product_id', '=', $product_id)->delete();
 	}

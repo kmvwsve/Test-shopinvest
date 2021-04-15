@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\catalog\common\CartController;
 use App\Http\Controllers\catalog\common\HeaderController;
 use App\Http\Controllers\catalog\common\FooterController;
+use Illuminate\Support\Facades\Cache;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Redirect,Response;
@@ -42,9 +43,14 @@ class ProductController extends Controller {
 * @return array $data list of params of product
 */
   public function getProductById($id) {
-    $m_product = new Product;
-    $data = array();
-		$product = $m_product->get($id);
+
+  	$data = array();
+  	$product = Cache::get('product_'.$id);
+  	if (!$product) {
+  		$m_product = new Product;
+			$product = $m_product->get($id);
+  		Cache::put('product_'.$id, $product, 60*24*7);
+  	} 
 
     if($product) {
 	    $data = array(
@@ -57,9 +63,9 @@ class ProductController extends Controller {
 	    	"images"      => $product["images"],
 	    	"description" => $product["description"]
 	    ); 
-
-	    return $data;
     } 
+
+  	return $data;
   }
 
 /**
