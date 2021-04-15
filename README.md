@@ -17,7 +17,7 @@
    ```sh
    composer install
    ```
-3. Entrer le fichier `.env`, et modifer les paramètres pour la connection de la base de données.
+3. Entrer le fichier `.env`, et modifer les paramètres de la connection de la base de données.
 4. Modifer le 'RewriteBase' dans le fichier `public/.htaccess`.
 5. Utiliser le fichier  `projectapp.sql` pour créer la base de données de test.
 
