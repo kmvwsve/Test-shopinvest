@@ -54,7 +54,7 @@ class ProductController extends Controller {
     		$m_product = new Product;
     		$prouct_tmp = $m_product->get($product_id);
     		$data["product"] = $prouct_tmp;
-    		$data["product"]["image_additional"] = implode(",", str_replace(PATH_IMAGE, "", $prouct_tmp["images"]));
+    		$data["product"]["image_additional"] = implode(",", str_replace(config('constants.PATH_IMAGE'), "", $prouct_tmp["images"]));
     	}
     }
 
@@ -95,7 +95,7 @@ class ProductController extends Controller {
 			foreach ($products as $key => $product) {
 				$image = "";
 				if ($product->image) {
-					$image = PATH_IMAGE.$product->image;
+					$image = config('constants.PATH_IMAGE').$product->image;
 				}
 
 				$data[] = array(

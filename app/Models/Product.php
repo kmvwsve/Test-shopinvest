@@ -38,7 +38,7 @@ class Product {
   		$images = $this->getProductImages($id);
   		foreach ($images as $image) {
   			if($image->image)
-  				$product["images"][] = PATH_IMAGE.$image->image;
+  				$product["images"][] = config('constants.PATH_IMAGE').$image->image;
   		}
   	}
   	return $product;

@@ -50,7 +50,7 @@ class ProductController extends Controller {
 	    $data = array(
 	    	"product_id"  => $product["product_id"],
 	    	"name"        => $product["name"],
-	    	"image"       => PATH_IMAGE.$product["image"],
+	    	"image"       => config('constants.PATH_IMAGE').$product["image"],
 	    	"mark"        => $product["mark"],
 	    	"price"       => $product["price"],
 	    	"special"     => $product["special"],
