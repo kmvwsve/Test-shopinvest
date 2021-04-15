@@ -69,3 +69,6 @@ Test ajouter un produit au panier.
    ```sh
    ./vendor/bin/phpunit
    ```
+## TO DO..
+1. Méthode de l'authentification.
+2. Module du traitement d'image.
