@@ -6,7 +6,8 @@
 - MySQL 5.7.26
 - Boostrap / jQuery / Ajax
 
-
+## Installation
+$ composer install
 
 ## About Laravel
 
