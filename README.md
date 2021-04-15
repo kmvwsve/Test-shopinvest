@@ -1,5 +1,5 @@
 <p align="center">
-<h1 align="center">TEST SHOPINVEST</h1>
+# TEST SHOPINVEST
 </p>
 <br><br>
 
@@ -20,6 +20,7 @@
    ```sh
    composer install
    ```
-3. Entrer le fichier `.env`, et modifer les paramètres pour la connection du base de donnée.
+3. Entrer le fichier `.env`, et modifer les paramètres pour la connection de la base de données.
 4. Modifer le 'RewriteBase' dans le fichier `public/.htaccess`.
+5. Utiliser le fichier  `projectapp.sql` pour créer la base de données de test.
 
