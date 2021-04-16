@@ -52,7 +52,7 @@ class ConnectController extends Controller {
 
 /**
 * Valide username and password
-* A16185464 shopinvest
+* 
 * @param array $user
 * @return array $error
 */
