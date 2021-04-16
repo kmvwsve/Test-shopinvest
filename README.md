@@ -1,5 +1,5 @@
 # TEST SHOPINVEST
-URL de test en ligne: http://test-shopinvest.shuo.fr/
+URL de test en ligne: http://test-shopinvest.shuo.fr/product/1
 
 ## Liste des technos
 - PHP 7.3.5
