@@ -65,7 +65,7 @@ class ConnectController extends Controller {
 	    $error["password"] = "Password is empty!";
   	}
   	if(!$error) {
-  		$user_query =DB::select('SELECT * FROM spt_user 
+  		$user_query = DB::select('SELECT * FROM spt_user 
   			WHERE username = ? 
   			AND password = ?', [$user["username"], md5($user["password"])]);
 
