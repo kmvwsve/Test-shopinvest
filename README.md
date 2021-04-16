@@ -1,5 +1,5 @@
 # TEST SHOPINVEST
-URL de test en ligne: http://test-shopinvest.shuo.fr/
+URL de test en ligne: http://test-shopinvest.shuo.fr/product/1
 
 ## Liste des technos
 - PHP 7.3.5
@@ -25,12 +25,12 @@ URL de test en ligne: http://test-shopinvest.shuo.fr/
 1. Page produit: (ex: product_id = 1)
     - Local: http://localhost/xxx/product/1
     - Test en ligne: http://test-shopinvest.shuo.fr/product/1
-2. Page gestion de prduits:
+2. Page admin:
     - Local: http://localhost/xxx/admin
     - Test en ligne: http://test-shopinvest.shuo.fr/admin
-3. Identifiant et mot de passe pour le test
-		- Id  : shopinvest
-		- Mdp : A16185464
+3. Identifiant et mot de passe pour la page Admin
+	- Id : ```shopinvest```
+	- Mdp : ```A16185464```
 ## Structure des fichiers
     ├── app                    
     │   ├── Http             
@@ -74,7 +74,7 @@ Test ajouter un produit au panier.
    ```sh
    ./vendor/bin/phpunit
    ```
-## TO DO..
+## TO DO...
 1. Page d'accueil.
-1. Module de l'authentification.
+1. Utiliser le Module 'Auth' et améliorer l'authentification.
 2. Module du traitement d'image.
