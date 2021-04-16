@@ -29,8 +29,8 @@ URL de test en ligne: http://test-shopinvest.shuo.fr/
     - Local: http://localhost/xxx/admin
     - Test en ligne: http://test-shopinvest.shuo.fr/admin
 3. Identifiant et mot de passe pour le test
-		- Id  : shopinvest
-		- Mdp : A16185464
+	- Id : ```shopinvest```
+	- Mdp : ```A16185464```
 ## Structure des fichiers
     ├── app                    
     │   ├── Http             
@@ -76,5 +76,5 @@ Test ajouter un produit au panier.
    ```
 ## TO DO..
 1. Page d'accueil.
-1. Module de l'authentification.
+1. Utiliser le Module et améliorer l'authentification.
 2. Module du traitement d'image.
