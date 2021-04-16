@@ -7,7 +7,7 @@ use App\Http\Controllers\catalog\common\FooterController;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Redirect,Response;
+use Response;
 
 class ProductController extends Controller {
 /**
