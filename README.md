@@ -28,7 +28,7 @@ URL de test en ligne: http://test-shopinvest.shuo.fr/product/1
 2. Page gestion de prduits:
     - Local: http://localhost/xxx/admin
     - Test en ligne: http://test-shopinvest.shuo.fr/admin
-3. Identifiant et mot de passe pour le test
+3. Identifiant et mot de passe pour la page Admin
 	- Id : ```shopinvest```
 	- Mdp : ```A16185464```
 ## Structure des fichiers
