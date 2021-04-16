@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use App\Http\Controllers\catalog\category\ProductController;
 use App\Http\Controllers\catalog\common\CartController;
+use App\Http\Controllers\admin\common\HeaderController;
 
 class addCartTest extends TestCase {
   /**

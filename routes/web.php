@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\ProductController;
 use App\Http\Controllers\catalog\category\ProductController;
 use App\Http\Controllers\catalog\common\CartController;
-use App\Http\Controllers\admin\category\ProductController as Admin;
+use App\Http\Controllers\admin\common\ConnectController;
+use App\Http\Controllers\admin\category\ProductController as AdminProduct;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,10 +23,14 @@ Route::get('/', function () {
 });
 
 // Action Admin
-Route::get('admin', [Admin::class, 'index'])->name('admin');
-Route::get('admin/Product/add', [admin::class, 'editProduct'])->name('add.product');
-Route::any('admin/Product/edit', [admin::class, 'editProduct'])->name('edit.product');
-Route::any('admin/Product/{id}/remove', [admin::class, 'removeProduct'])->name('remove.product');
+// Route::get('admin', [AdminProduct::class, 'index'])->name('admin');
+Route::any('admin', [ConnectController::class, 'index'])->name('connect');
+Route::any('admin/login', [ConnectController::class, 'index'])->name('login.admin');
+Route::get('admin/logout', [ConnectController::class, 'logout'])->name('logout.admin');
+Route::get('admin/Products', [AdminProduct::class, 'index'])->name('list.product');
+Route::get('admin/Product/add', [AdminProduct::class, 'editProduct'])->name('add.product');
+Route::any('admin/Product/edit', [AdminProduct::class, 'editProduct'])->name('edit.product');
+Route::any('admin/Product/{id}/remove', [AdminProduct::class, 'removeProduct'])->name('remove.product');
 
 // Action Cart
 Route::get('cart/loadCart', [CartController::class, 'loadCart'])->name('load.cart');

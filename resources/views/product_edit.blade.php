@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="pull-right">
         <button type="submit" form="form-mark" data-toggle="tooltip" title="Save" class="btn btn-primary"><i class="fa fa-save"></i></button>
-        <a href="{{route('admin')}}" data-toggle="tooltip" title="cancel" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+        <a href="{{route('list.product')}}" data-toggle="tooltip" title="cancel" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
       <h1><?php echo $heading_title; ?></h1>
     </div>
   </div>
@@ -59,7 +59,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-price">Price</label>
             <div class="col-sm-10">
-              <input type="text" name="price" value="<?php echo $product['price'] ?>" placeholder="ex:19.99" id="input-price" class="form-control" />
+              <input type="text" name="price" value="<?php echo $product['price'] ?>" placeholder="ex:19.99  0 - 10000" id="input-price" class="form-control" />
               <?php if (isset($error["price"])) { ?>
 	            	<div class="text-danger"><b><?php echo $error["price"]; ?></b></div>
 	            <?php } ?>
@@ -70,7 +70,10 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-special">special</label>
             <div class="col-sm-10">
-              <input type="text" name="special" value="<?php echo $product['special'] ?>" placeholder="ex:19.99" id="input-special" class="form-control" />
+              <input type="text" name="special" value="<?php echo $product['special'] ?>" placeholder="ex:19.99  0 - 10000" id="input-special" class="form-control" />
+              <?php if (isset($error["special"])) { ?>
+	            	<div class="text-danger"><b><?php echo $error["special"]; ?></b></div>
+	            <?php } ?>
             </div>
           </div>
 
@@ -78,7 +81,10 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-quantity">Quantity</label>
             <div class="col-sm-10">
-              <input type="number" name="quantity" value="<?php echo $product['quantity'] ?>" placeholder="0" id="input-quantity" class="form-control" />
+              <input type="number" name="quantity" value="<?php echo $product['quantity'] ?>" placeholder="0 - 10000" id="input-quantity" class="form-control" />
+              <?php if (isset($error["quantity"])) { ?>
+	            	<div class="text-danger"><b><?php echo $error["quantity"]; ?></b></div>
+	            <?php } ?>
             </div>
           </div>
 

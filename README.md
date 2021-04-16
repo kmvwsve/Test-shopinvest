@@ -27,8 +27,9 @@
     │   │   ├── Controllers              
     │   │   │   ├── admin              
     │   │   │   │   ├── category              
-    │   │   │   │   │   └── ProductController.php     # page admin index, page liste des produits, CRUD
+    │   │   │   │   │   └── ProductController.php     # liste des produits, CRUD
     │   │   │   │   └── common              
+    │   │   │   │       ├── ConnectController.php     # Authentification 
     │   │   │   │       ├── HeaderController.php      # page admin header
     │   │   │   │       └── FooterController.php      # page admin footer
     │   │   │   ├── catalog              
@@ -52,6 +53,7 @@
     │   │   ├── footer.blade.php
     │   │   ├── header.blade.php
     │   │   ├── header_admin.blade.php
+    │   │   ├── login.blade.php
     │   │   ├── product.blade.php
     │   │   ├── product_edit.blade.php
     │   │   └── ...

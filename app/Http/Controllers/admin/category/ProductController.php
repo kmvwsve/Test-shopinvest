@@ -8,19 +8,20 @@ use Illuminate\Http\Request;
 use Redirect,Response;
 
 class ProductController extends Controller {
+
 /**
 * Display list of product.
 *
 */	
   public function index() {
-    $header = new HeaderController;
-    $footer = new FooterController;
+    $header  = new HeaderController;
+    $footer  = new FooterController;
 
     $data = array();
 		$data["products"] = $this->getProducts();
     $data['header'] = $header->index();
     $data['footer'] = $footer->index();
-    return view('admin', $data);
+    return view('product_list', $data);
   }
 
 /**
@@ -69,7 +70,7 @@ class ProductController extends Controller {
 		    } else {
 		    	$m_product->add( $data["product"] );
 		    }
-				return redirect()->route('admin');
+				return redirect()->route('list.product');
 	    }
     }
 
@@ -123,7 +124,7 @@ class ProductController extends Controller {
   public function removeProduct($product_id) {
     $m_product = new Product;
     $m_product->remove($product_id);
-		return redirect()->route('admin');
+		return redirect()->route('list.product');
   }
 
 /**
@@ -162,6 +163,15 @@ class ProductController extends Controller {
 	    }
 	    if(!$product["price"]) {
 	    	$error["price"] = "Product's price is empty!";
+	    }
+	    if((float)$product["price"] < 0 || (float)$product["price"] > 10000) {
+	    	$error["price"] = "Price must be enter 0 - 10000!";
+	    }
+	    if((float)$product["special"] < 0 || (float)$product["special"] > 10000) {
+	    	$error["special"] = "Special must be enter 0 - 10000!";
+	    } 
+	    if((float)$product["quantity"] < 0 || (float)$product["quantity"] > 10000) {
+	    	$error["quantity"] = "Quantity must be enter 0 - 10000!";
 	    } 
   	}
 
