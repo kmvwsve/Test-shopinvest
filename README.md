@@ -25,7 +25,7 @@ URL de test en ligne: http://test-shopinvest.shuo.fr/product/1
 1. Page produit: (ex: product_id = 1)
     - Local: http://localhost/xxx/product/1
     - Test en ligne: http://test-shopinvest.shuo.fr/product/1
-2. Page gestion de prduits:
+2. Page admin:
     - Local: http://localhost/xxx/admin
     - Test en ligne: http://test-shopinvest.shuo.fr/admin
 3. Identifiant et mot de passe pour la page Admin
