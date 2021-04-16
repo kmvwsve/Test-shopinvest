@@ -1,6 +1,6 @@
 <?php
 // Define HTTP_SERVER
-$SERVER_NAME = isset($_SERVER["HTTP_HOST"])?$_SERVER["HTTP_HOST"]:"localhost/";
+$SERVER_NAME = isset($_SERVER["HTTP_HOST"])?$_SERVER["HTTP_HOST"]:"localhost";
 $SERVER_NAME.= isset($_SERVER["CONTEXT_PREFIX"])?"".$_SERVER["CONTEXT_PREFIX"]:"";
 
 // HTTP / HTTPS
