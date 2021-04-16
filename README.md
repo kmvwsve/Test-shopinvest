@@ -55,6 +55,9 @@ URL de test en ligne: http://test-shopinvest.shuo.fr/product/1
     │   ├── Model              
     │   │   ├── Product.php    # Opérations CRUD de la base de donnée 
     |   |   └── ...
+    ├── config             
+    │   ├── constants.php      # Définition constante
+    |   └── ...
     ├── resources
     │   ├── views              
     │   │   ├── 404.blade.php
