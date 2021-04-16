@@ -74,7 +74,7 @@ Test ajouter un produit au panier.
    ```sh
    ./vendor/bin/phpunit
    ```
-## TO DO..
+## TO DO...
 1. Page d'accueil.
 1. Utiliser le Module 'Auth' et améliorer l'authentification.
 2. Module du traitement d'image.
