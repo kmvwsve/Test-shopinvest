@@ -58,7 +58,6 @@ class CartController extends Controller {
 	// TO DO...
 	public function update(){}
 
-	// Remove from cart
 
 /**
 * Add product(s) to cart
