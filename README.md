@@ -37,7 +37,7 @@ URL de test en ligne: http://test-shopinvest.shuo.fr/product/1
     │   │   ├── Controllers              
     │   │   │   ├── admin              
     │   │   │   │   ├── category              
-    │   │   │   │   │   └── [ProductController.php](https://github.com/kmvwsve/Test-shopinvest/blob/master/app/Http/Controllers/admin/category/ProductController.php)     # liste des produits, CRUD
+    │   │   │   │   │   └── ProductController.php     # liste des produits, CRUD
     │   │   │   │   └── common              
     │   │   │   │       ├── ConnectController.php     # Authentification 
     │   │   │   │       ├── HeaderController.php      # page admin header
