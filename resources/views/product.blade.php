@@ -16,15 +16,15 @@
 			<div class="col-sm-6">
 				<div id="page-product-images">
 					<a href="javascript:;" id="image-thumb-a">
-						<img src="<?php echo $product['image']; ?>" id="image-thumb" class="img-responsive">
+						<img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" id="image-thumb" class="img-responsive">
 					</a>
 					<div id="image-additionals">
 						<a href="javascript:;" class="image-adl-a active">
-							<img src="<?php echo $product['image']; ?>" class="image-adl img-responsive">
+							<img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" class="image-adl img-responsive">
 						</a>
 					<?php foreach ($product['images'] as $images): ?>
 						<a href="javascript:;" class="image-adl-a">
-							<img src="<?php echo $images; ?>" class="image-adl img-responsive">
+							<img src="<?php echo $images; ?>" alt="<?php echo $product['name']; ?>" class="image-adl img-responsive">
 						</a>
 					<?php endforeach ?>
 					</div>
